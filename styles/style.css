@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+:root {
+    --fonte-lexend-deca: "Lexend Deca", sans-serif;
+    --fonte-big-shoulders: "Big Shoulders Display", sans-serif;
+    --cor-laranja: hsl(31, 77%, 52%);
+    --cor-ciano: hsl(184, 100%, 22%);
+    --cor-ciano-escuro: hsl(179, 100%, 13%);
+    --cor-paragrafos: hsla(0, 0%, 100%, 0.75);
+    --cor-titulos: hsl(0, 0%, 95%); /* Cor dos títulos, background e dos botões no efeito :hover */
+}
+
+body {
+    background-color: var(--cor-titulos);
+    font-size: 15px;
+}
+
+.container__carro__sedan {
+    background-color: var(--cor-laranja);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.container__carro__suv {
+    background-color: var(--cor-ciano);
+}
+
+.container__carro__luxury {
+    background-color: var(--cor-ciano-escuro);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.container__carro__imagem {
+    width: 64px;
+    height: 40px;
+}
+
+.container__carro__titulo {
+    color: var(--cor-titulos);
+    font-family: var(--fonte-big-shoulders);
+    font-size: 3em;
+}
+
+.container__carro__paragrafo {
+    color: var(--cor-paragrafos);
+    font-family: var(--fonte-lexend-deca);
+    line-height: 1.7em;
+}
+
+.container__carro__botao {
+    background-color: var(--cor-titulos);
+    font-family: var(--fonte-lexend-deca);
+    font-weight: 400;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 15px;
+    font-size: 15px;
+    width: 160px;
+}
+
+.botao__sedan {
+    color: var(--cor-laranja);
+}
+
+.botao__sedan:hover {
+    border: 1px solid var(--cor-laranja);
+}
+
+.botao__suv {
+    color: var(--cor-ciano);
+}
+
+.botao__luxury {
+    color: var(--cor-ciano-escuro);
+}
+
+.container__carro__botao:hover {
+    color: var(--cor-titulos);
+    background-color: transparent;
+    cursor: pointer;
+    outline: 2px solid white;
+}
+
+@media (min-width: 1440px) {
+   .flex__container {
+        display: flex;
+        justify-content: center;
+        margin-top: 200px;
+   }
+
+   .container__carro__sedan, .container__carro__suv, .container__carro__luxury {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 310px;
+        height: 564px;
+        padding-left: 60px;
+   }
+
+   .container__carro__botao {
+       margin-top: 5em;
+   }
+}
+
+@media (max-width: 1439px){
+   .flex__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+   }
+
+   .container__carro__sedan, .container__carro__suv, .container__carro__luxury {
+        width: 90%;
+        height: 440px;
+        border-radius: 0px;
+        padding-top: 40px;
+        padding-left: 60px;
+   }
+
+   .container__carro__botao {
+        margin-top: 2em;
+   }
+
+   .container__carro__sedan {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+   }
+
+   .container__carro__luxury {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+   }
+}
